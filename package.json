@@ -1,10 +1,9 @@
 {
   "name": "@vcostin/roman-numbers",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "TDD cata for roman-numbers, and it's working, at least  from 0 til 4999",
   "main": "index.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "mocha": "^2.4.5",
     "blanket": "^1.2.2",
@@ -16,7 +15,10 @@
   "config": {
     "blanket": {
       "pattern": "index.js",
-      "data-cover-never": [ "node_modules", "test" ]
+      "data-cover-never": [
+        "node_modules",
+        "test"
+      ]
     }
   },
   "repository": {
