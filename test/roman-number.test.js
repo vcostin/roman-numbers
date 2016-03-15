@@ -4,7 +4,7 @@ var romanNumbers = require('../index');
 describe('testing roman number converter', function () {
 
 
-  it('Expect to throw Error if number is outside 0 and 5000 range', function () {
+  it('Expect to throw Error if number is outside 0 and 4999 range', function () {
     expect(function () {
       romanNumbers(-1);
     }).to.throw('The number should be in 0 and 4999 range');
