@@ -22,8 +22,8 @@ module.exports = function (number) {
     throw new TypeError('Input should be a integer number');
   }
 
-  if (transform < 0){
-    throw new Error('The number must be positive');
+  if (transform < 0 || transform > 4999){
+    throw new RangeError('The number should be in 0 and 4999 range');
   }
 
   if(transform === 0){

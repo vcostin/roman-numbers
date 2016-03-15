@@ -4,10 +4,14 @@ var romanNumbers = require('../index');
 describe('testing roman number converter', function () {
 
 
-  it('Expect to throw Error on negative number', function () {
+  it('Expect to throw Error if number is outside 0 and 5000 range', function () {
     expect(function () {
       romanNumbers(-1);
-    }).to.throw('The number must be positive');
+    }).to.throw('The number should be in 0 and 4999 range');
+
+    expect(function () {
+      romanNumbers(5000);
+    }).to.throw('The number should be in 0 and 4999 range');
   });
 
   it('Expect to throw TypeError if imput is not a number or integer', function () {

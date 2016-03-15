@@ -5,7 +5,7 @@ TDD cata for roman-numbers, and it's working, at least  from 0 til 4999, btw I f
 
 ## Usage
 ```javascript
-var romanNumber = require('roman-numbers');
+var romanNumber = require('@vcostin/roman-numbers');
 console.log(romanNumber(1999));
 //MCMXCIX
 ```
