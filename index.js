@@ -16,17 +16,18 @@ module.exports = function (number) {
     {value: 4, substitution: 'IV'},
     {value: 1, substitution: 'I'}
   ];
+  const MIN = 0, MAX = 4999;
   var transform = number;
 
   if (transform !== parseInt(transform, 10)){
     throw new TypeError('Input should be a integer number');
   }
 
-  if (transform < 0 || transform > 4999){
-    throw new RangeError('The number should be in 0 and 4999 range');
+  if (transform < MIN || transform > MAX){
+    throw new RangeError('The number should be in '+ MIN +' and ' + MAX+ ' range');
   }
 
-  if(transform === 0){
+  if(transform === MIN){
     answer = 'nulla';
   }
 
