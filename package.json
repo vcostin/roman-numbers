@@ -1,0 +1,34 @@
+{
+  "name": "@vcostin/roman-numbers",
+  "version": "0.0.1",
+  "description": "TDD cata for roman-numbers, and it's working, at least  from 0 til 4999",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "blanket": "^1.2.2",
+    "chai": "^3.5.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "index.js",
+      "data-cover-never": [ "node_modules", "test" ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vcostin/roman-numbers.git"
+  },
+  "keywords": [
+    "roman-numbers",
+    "mocha",
+    "chai",
+    "blanket"
+  ],
+  "author": "vcostin <vadim.costin@gmail.com>",
+  "license": "MIT"
+}
