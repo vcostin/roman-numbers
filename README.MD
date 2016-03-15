@@ -1,4 +1,5 @@
 # Roman Numbers Converter
+[![Build Status](https://travis-ci.org/vcostin/roman-numbers.svg?branch=master)](https://travis-ci.org/vcostin/roman-numbers)
 
 TDD cata for roman-numbers, and it's working, at least  from 0 til 4999, btw I found out that zero is "nulla" in latin
 
