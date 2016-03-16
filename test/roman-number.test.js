@@ -2,7 +2,7 @@ var expect = require('chai').expect;
 var romanNumbers = require('../index');
 
 describe('testing roman number converter', function () {
-
+  'use strict';
 
   it('Expect to throw Error if number is outside 0 and 4999 range', function () {
     expect(function () {

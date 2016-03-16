@@ -1,43 +1,39 @@
 module.exports = function (number) {
-
-  var answer = '';
-  var romanNumbers = [
-    {value: 1000, substitution: 'M'},
-    {value: 900, substitution: 'CM'},
-    {value: 500, substitution: 'D'},
-    {value: 490, substitution: 'XD'},
-    {value: 100, substitution: 'C'},
-    {value: 90, substitution: 'XC'},
-    {value: 50, substitution: 'L'},
-    {value: 40, substitution: 'XL'},
-    {value: 10, substitution: 'X'},
-    {value: 9, substitution: 'IX'},
-    {value: 5, substitution: 'V'},
-    {value: 4, substitution: 'IV'},
-    {value: 1, substitution: 'I'}
+  'use strict';
+  var MIN = 0, MAX = 4999, crossingTransformation, transform = number;
+  crossingTransformation = [
+    {decimal: 1000, roman: 'M'},
+    {decimal: 900, roman: 'CM'},
+    {decimal: 500, roman: 'D'},
+    {decimal: 490, roman: 'XD'},
+    {decimal: 100, roman: 'C'},
+    {decimal: 90, roman: 'XC'},
+    {decimal: 50, roman: 'L'},
+    {decimal: 40, roman: 'XL'},
+    {decimal: 10, roman: 'X'},
+    {decimal: 9, roman: 'IX'},
+    {decimal: 5, roman: 'V'},
+    {decimal: 4, roman: 'IV'},
+    {decimal: 1, roman: 'I'}
   ];
-  const MIN = 0, MAX = 4999;
-  var transform = number;
 
-  if (transform !== parseInt(transform, 10)){
+  if (transform !== parseInt(transform, 10)) {
     throw new TypeError('Input should be a integer number');
   }
 
-  if (transform < MIN || transform > MAX){
-    throw new RangeError('The number should be in '+ MIN +' and ' + MAX+ ' range');
+  if (transform < MIN || transform > MAX) {
+    throw new RangeError('The number should be in ' + MIN + ' and ' + MAX + ' range');
   }
 
-  if(transform === MIN){
-    answer = 'nulla';
+  if (transform === MIN) {
+    return 'nulla';
   }
 
-  if (transform >= 1) {
-    romanNumbers.forEach(function (romanNumber) {
-      for (; transform >= romanNumber.value; transform -= romanNumber.value) {
-        answer += romanNumber.substitution;
-      }
-    });
-  }
+  return crossingTransformation.reduce(function (output, crossing) {
+    for (; transform >= crossing.decimal; transform -= crossing.decimal) {
+      output += crossing.roman;
+    }
+    return output;
+  }, '');
 
-  return answer;
 };
