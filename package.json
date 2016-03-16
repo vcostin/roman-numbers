@@ -1,6 +1,6 @@
 {
   "name": "@vcostin/roman-numbers",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TDD cata for roman-numbers, and it's working, at least  from 0 til 4999",
   "main": "index.js",
   "dependencies": {},
