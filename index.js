@@ -29,12 +29,13 @@ module.exports = function (number) {
     return 'nulla';
   }
 
-  return crossingTransformation.reduce(function (output, crossing) {
-    while (transform >= crossing.decimal) {
-      transform -= crossing.decimal;
-      output += crossing.roman;
+  return crossingTransformation.reduce(function romanTransformation (output, crossing) {
+    if(transform < crossing.decimal) {
+      return output
     }
-    return output;
+    transform -= crossing.decimal;
+    output += crossing.roman;
+    return romanTransformation(output, crossing);
   }, '');
 
 };
