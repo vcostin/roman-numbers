@@ -5,7 +5,9 @@ module.exports = function (number) {
     {decimal: 1000, roman: 'M'},
     {decimal: 900, roman: 'CM'},
     {decimal: 500, roman: 'D'},
+    // XD might be invalid
     {decimal: 490, roman: 'XD'},
+    // {decimal: 400, roman: 'CD'},
     {decimal: 100, roman: 'C'},
     {decimal: 90, roman: 'XC'},
     {decimal: 50, roman: 'L'},
