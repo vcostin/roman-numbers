@@ -30,7 +30,8 @@ module.exports = function (number) {
   }
 
   return crossingTransformation.reduce(function (output, crossing) {
-    for (; transform >= crossing.decimal; transform -= crossing.decimal) {
+    while (transform >= crossing.decimal) {
+      transform -= crossing.decimal;
       output += crossing.roman;
     }
     return output;
