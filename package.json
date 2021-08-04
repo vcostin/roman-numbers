@@ -10,7 +10,8 @@
     "chai": "^3.5.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "coverage": "mocha --require blanket -R html-cov > coverage.html"
   },
   "config": {
     "blanket": {
